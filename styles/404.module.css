@@ -1,0 +1,34 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* place-items: center; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--charcoal);
+  overflow: hidden;
+}
+
+.container h1 {
+  font-family: var(--font-title);
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+.container h1 a {
+  color: var(--gold);
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.container iframe {
+  width: 400px;
+  height: 400px;
+}
+
+
+.container h2 {}
