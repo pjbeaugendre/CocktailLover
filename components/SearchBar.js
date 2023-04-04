@@ -27,7 +27,7 @@ const SearchBar = () => {
 
   return (
     <>
-      <form className={styles.search_bar} action='true' submit='Submit'>
+      <form className={styles.search_bar} submit='Submit'>
         <div className={styles.content}>
           <input type="checkbox" id="switch" className={styles.checkbox} onChange={(e) => checkboxChanged(e)}></input>
           <label htmlFor="switch" className={styles.label}>
