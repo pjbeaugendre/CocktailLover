@@ -87,7 +87,7 @@ export async function getServerSideProps(context) {
       res = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?${context.query.query}`)
     }
   } else {
-      res = await fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=")
+      res = await fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=are")
   }
 
   try {
