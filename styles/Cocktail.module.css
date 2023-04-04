@@ -85,7 +85,7 @@
   font-weight: 700;
   color: white;
   margin-bottom: 0.5rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s linear;
   width: fit-content;
   background-color: transparent;
 }
@@ -94,7 +94,7 @@
   content: "";
   position: absolute;
   height: 0.2rem;
-  width: calc(100% + 3rem);
+  width: calc(100% + 2rem);
   bottom: 0;
   left: -1.25rem;
   margin-top: 10px;
@@ -127,5 +127,41 @@
 
   .card:hover .card_title::before {
     transform: translateX(0%);
+  }
+}
+
+@media (min-width: 1440px) {
+  .card_content {
+    max-width: 400px;
+  }
+  .card_title_container {
+    
+  }
+  
+  .card_title_container > svg {
+  }
+  
+  .card_title {
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 90%;
+    width: fit-content;
+  }
+
+  .card_title::before {
+  }
+}
+
+@media (min-width: 2560px) {
+  .card_content {
+    max-width: 600px;
+  }
+
+  .card_title {
+    margin-bottom: 4rem;
+  }
+
+  .card:hover .card_title{
+    margin-bottom: 2rem;
   }
 }

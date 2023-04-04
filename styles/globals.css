@@ -22,6 +22,10 @@
   }
 }
 
+html, body {
+  background-color: var(--charcoal);
+}
+
 * {
   width: 100%;
   box-sizing: border-box;

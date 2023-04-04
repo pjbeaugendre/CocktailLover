@@ -9,7 +9,7 @@ const CocktailCard = ({cocktail}) => {
 
   return (
     <Link href={'/cocktails/' + cocktail.idDrink} className={styles.card}>
-      <Image alt='cocktail Image' src={cocktail.strDrinkThumb} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className={styles.card_image}></Image>
+      <Image alt='cocktail Image' src={cocktail.strDrinkThumb} quality={40} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className={styles.card_image}></Image>
       <div className={styles.card_content}>
         <div className={styles.card_title_container}>
           <h3 className={styles.card_title}>{cocktail.strDrink}</h3>
@@ -17,17 +17,19 @@ const CocktailCard = ({cocktail}) => {
         </div>
         {cocktail.strCategory
           ? <div className={styles.card_content_checker}>
-              <p><strong>CATEGORY: </strong>{cocktail.strCategory.toUpperCase()}</p>
+              <p><strong>CATEGORY: </strong>{cocktail.strCategory}</p>
               <p><strong>INGREDIENTS: </strong>{
                 ingredients.map((ingredient, index) => {
-                  if (index === ingredients.length - 1) {
+                  if (index < 6 && index != ingredients.length - 1) {
                     return (
-                      <span key={index}>and {ingredient.toUpperCase()}.</span>
+                      <span key={index}>{ingredient}, </span>
+                    )
+                  } else if (index === ingredients.length - 1 || index === 5) {
+                    return (
+                      <span key={index}>and {ingredient}.</span>
                     )
                   } else {
-                    return (
-                      <span key={index}>{ingredient.toUpperCase()}, </span>
-                    )
+                    return(null)
                   }
                 }
               )}

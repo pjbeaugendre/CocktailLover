@@ -5,6 +5,8 @@ import styles from '@/styles/Home.module.css'
 import CocktailCard from '@/components/CocktailCard'
 import SearchBar from '@/components/SearchBar'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
+import logo from '../public/icons/svg/cocktail-lover-high-resolution-logo-white-on-transparent-background.svg'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -36,12 +38,12 @@ export default function Home({data, query}) {
       <main className={styles.main}>
         <section className={styles.hero_banner} role="banner">
           <video playsInline autoPlay muted loop id="heroVideo" className={styles.hero_banner_video}>
-            <source src="lemon-hero-banner.mp4" type="video/mp4" />
+            <source src="lemonadeC.mp4" type="video/mp4" />
           </video>
           <div className={styles.hero_banner_texts_container}>
             <div className={styles.hero_banner_fade}></div>
             <div className={styles.hero_banner_texts}>
-              <img className={styles.logo_img} src="/icons/svg/cocktail-lover-high-resolution-logo-white-on-transparent-background.svg" alt="Logo" />
+              <Image src={logo} alt="Logo" className={styles.logo_img}></Image>
                 <h2>
                   <span>ALWAYS BE</span>
                   <div className={styles.message}>

@@ -60,6 +60,7 @@
   object-fit: fill;
   border-radius: 10px;
   background-color: var(--charcoal);
+  margin: auto;
 }
 
 .h2 {
@@ -83,6 +84,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  height: 300px;
 }
 
 .ingredients {
@@ -120,10 +123,12 @@
   letter-spacing: 0.4px;
   max-width: 400px;
   height: fit-content;
+  background: transparent;
 }
 
 .social_media h2 {
   grid-column: 1 / -1;
+  background: transparent;
 }
 
 .custom_shape_divider_top {

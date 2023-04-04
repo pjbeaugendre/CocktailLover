@@ -15,6 +15,8 @@ import {
   EmailIcon
 } from 'next-share';
 import SearchBar from '@/components/SearchBar';
+import Image from 'next/image';
+import logo from '../../public/icons/svg/cocktail-lover-high-resolution-logo-black-on-transparent-background.svg'
 
 export default function Cocktail({cocktail}) {
   const ingredients = getIngredients(cocktail);
@@ -32,7 +34,7 @@ export default function Cocktail({cocktail}) {
       <main className={styles.main}>
         <header className={styles.header}>
           <Link href={'/'}>
-            <img alt='logo' src="/icons/svg/cocktail-lover-high-resolution-logo-black-on-transparent-background.svg" fill="true" className={styles.logo}></img>
+            <Image alt='Logo' src={logo} className={styles.logo}></Image>
           </Link>
 
           <div className={styles.search}>
@@ -53,7 +55,7 @@ export default function Cocktail({cocktail}) {
         {/* <Image alt='cocktail Image' src={cocktail.strDrinkThumb} fill className={styles.card_image}></Image> */}
         <div className={styles.container}>
           <section className={styles.image}>
-            <img alt='cocktail Image' src={cocktail.strDrinkThumb} fill className={styles.card_image}></img>
+            <Image alt="Cocktail Picture" src={cocktail.strDrinkThumb} className={styles.card_image} fill></Image>
           </section>
           <section className={styles.ingredients}>
             <h2 className={styles.h2}>Ingredients</h2>
