@@ -1,5 +1,5 @@
 .header {
-  height: 80px;
+  height: 100px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -13,8 +13,8 @@
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 }
 
 .search {
@@ -48,7 +48,6 @@
   justify-items: center;
   background-color: var(--charcoal);
   width: 100%;
-  min-height: 77vh;
   color: white;
   padding: 30px;
 }
@@ -165,6 +164,11 @@
   .social_media {
     grid-column: span 2;
   }
+
+  .logo {
+    width: 140px;
+    height: 140px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -176,9 +180,8 @@
     padding: 30px 150px;
   }
 
-  .logo {
-    width: 70px;
-    height: 70px;
+  .header {
+    padding: 0 70px;
   }
 
   .h1 {

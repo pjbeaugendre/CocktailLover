@@ -16,7 +16,7 @@ import {
 } from 'next-share';
 import SearchBar from '@/components/SearchBar';
 import Image from 'next/image';
-import logo from '../../public/icons/svg/cocktail-lover-high-resolution-logo-black-on-transparent-background.svg'
+import logo from '../../public/icons/svg/favicon.svg'
 
 export default function Cocktail({cocktail}) {
   const ingredients = getIngredients(cocktail);
@@ -34,7 +34,7 @@ export default function Cocktail({cocktail}) {
       <main className={styles.main}>
         <header className={styles.header}>
           <Link href={'/'}>
-            <Image alt='Logo' src={logo} className={styles.logo}></Image>
+            <Image alt='Logo' src={logo} className={styles.logo} priority sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"></Image>
           </Link>
 
           <div className={styles.search}>
@@ -55,7 +55,7 @@ export default function Cocktail({cocktail}) {
         {/* <Image alt='cocktail Image' src={cocktail.strDrinkThumb} fill className={styles.card_image}></Image> */}
         <div className={styles.container}>
           <section className={styles.image}>
-            <Image alt="Cocktail Picture" src={cocktail.strDrinkThumb} className={styles.card_image} fill></Image>
+            <Image alt="Cocktail Picture" src={cocktail.strDrinkThumb} className={styles.card_image} fill priority sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"></Image>
           </section>
           <section className={styles.ingredients}>
             <h2 className={styles.h2}>Ingredients</h2>
