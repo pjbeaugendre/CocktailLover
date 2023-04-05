@@ -10,7 +10,7 @@
   transition: all 0.3s ease-in-out;
   user-select: none;
   cursor: pointer;
-  min-width: 400px;
+  min-width: 350px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 30px;
 }
 
@@ -113,6 +113,9 @@
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 1120px) {
+  .card {
+    min-width: 400px;
+  }
   .card_content {
     transform: translateY(55%);
   }
