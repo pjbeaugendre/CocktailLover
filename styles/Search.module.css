@@ -4,11 +4,12 @@
   align-items: center;
   margin: auto;
   width: 50%;
-  height: 60px;
+  height: 50px;
   cursor: pointer;
   transition: all 1s;
   background-color: rgba(28, 34, 34, 0.8);
   -webkit-tap-highlight-color: transparent;
+  border-radius: 100px;
 }
 
 .content {
@@ -22,23 +23,25 @@
 .label {
   width: 100%;
   height: 100%;
-  background-color: rgba(28, 34, 34, 0.5);
+  /* background-color: rgba(28, 34, 34, 0.5); */
   position: relative;
   cursor: pointer;
+  border-radius: 0% 0% 0% 0%;
 }
 
 .toggle {
   position: absolute;
-  width: 50%;
+  bottom: 0;
+  width: 30%;
   height: 100%;
   border-radius: inherit;
-  border: 2px solid white;
-  box-shadow: 0 2px 15px rgba(0,0,0,.15);
+  border-bottom: 1px solid var(--gold);
   transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translate(34%, -11%);
 }
 
 .names {
-  font-size: 90%;
+  font-size: 80%;
   font-weight: bolder;
   width: 100%;
   height: 100%;
@@ -49,6 +52,7 @@
   font-family: var(--font-text);
   letter-spacing: 1px;
 }
+
 .dark {
   opacity: .5;
   color: white;
@@ -65,7 +69,7 @@
 }
 
 .checkbox:checked + .label .toggle {
-  transform: translateX(100%);
+  transform: translate(200%, -11%);
 }
 .checkbox:checked + .label .dark{
   opacity: 1;
@@ -77,7 +81,7 @@
 }
 
 .text_input_container {
-  width: 100%;
+  width: 70%;
   height: 100%;
   background-color: transparent;
   outline: 0;
@@ -89,33 +93,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
   flex-direction: row;
 }
 
 .text_input {
-  width: 100%;
+  width: 60%;
   height: 100%;
   background-color: transparent;
   outline: 0;
   border: 0;
-  font-size: 1em;
+  font-size: 90%;
   border-radius: 100px;
   padding: 0 20px;
   color: white;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   font-family: var(--font-text);
   letter-spacing: 1px;
 }
 
+.search_svg {
+  width: 15px;
+  height: 15px;
+}
+
 @media screen and (min-width: 768px) {
   .search_bar {
     flex-direction: row;
     width: 100%;
-    height: 50px;
     margin: none;
     text-align: center;
     justify-content: center;
@@ -125,13 +132,35 @@
 
   .label {
     border-radius: 100px;
+    background-color: rgba(28, 34, 34, 0.5);
   }
 
   .toggle {
     border-radius: 100px;
+    transform: translatex(0%);
+    width: 50%;
+    border: 2px solid white;
+  }
+
+  .checkbox:checked + .label .toggle {
+    transform: translateX(100%);
   }
 
   .text_input_container {
     width: 60%;
+  }
+
+  .names {
+    font-size: 90%;
+  }
+
+  .text_input {
+    width: 100%;
+    font-size: 100%;
+  }
+
+  .search_svg {
+    width: 20px;
+    height: 20px;
   }
 }
