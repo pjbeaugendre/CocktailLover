@@ -82,26 +82,26 @@ export default function Cocktail({cocktail}) {
             <h2 className={styles.h2}>Share it</h2>
             <WhatsappShareButton
               title={`What do you think about this cocktail, ${cocktail.strDrink} ?`}
-              url={`${process.env.NEXT_PUBLIC_HOST}cocktails/${cocktail.idDrink}`} >
+              url={`https://cocktail-lover.vercel.app/cocktails/${cocktail.idDrink}`} >
               <WhatsappIcon size={32} round />
             </WhatsappShareButton>
 
             <FacebookShareButton
-              href={`${process.env.NEXT_PUBLIC_HOST}cocktails/${cocktail.idDrink}`}
+              href={`https://cocktail-lover.vercel.app/cocktails/${cocktail.idDrink}`}
               quote={`${cocktail.strDrink}. I think you will like it!`}
               hashtag={'#cocktaillover'}
             >
               <FacebookIcon size={32} round />
             </FacebookShareButton>
             <TwitterShareButton
-              url={`${process.env.NEXT_PUBLIC_HOST}cocktails/${cocktail.idDrink}`}
+              url={`https://cocktail-lover.vercel.app/cocktails/${cocktail.idDrink}`}
               title={`${cocktail.strDrink}. I think you will like it!`}
             >
               <TwitterIcon size={32} round />
             </TwitterShareButton>
 
             <EmailShareButton
-              url={`${process.env.NEXT_PUBLIC_HOST}cocktails/${cocktail.idDrink}`}
+              url={`https://cocktail-lover.vercel.app/cocktails/${cocktail.idDrink}`}
               subject={'This cocktail is amazing!'}
               body="I think you will like it!"
             >
